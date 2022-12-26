@@ -13,28 +13,23 @@ body{
 form{
     position: relative;
 }
-span{
+.span{
     font-size:22px;
-    padding: 3px;
+    padding: 1px;
     background-color: white;
     position: absolute;
     top: 18px;
     left: 20px;
-    animation-name:provoke;
-    animation-duration:0.5s;
-    animation-fill-mode: forwards;
+    cursor: text;
+    pointer-events: none;
+    transition: 1s;
+    
 }
-@keyframes provoke{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(-29px);
-        border-left: 2px solid black;
-        border-right: 2px solid black;
-    }
+.span-border{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    
 }
-
 .input{
     width: 350px;
     height: 70px;
@@ -43,17 +38,5 @@ span{
     padding-left: 10px;
 }
 
-.input:active{
-    @keyframes provoke{
-        0%{
-            transform: translateY(0);
-        }
-        100%{
-            transform: translateY(-29px);
-            border-left: 2px solid black;
-            border-right: 2px solid black;
-        }
-    }
-}
 
 
